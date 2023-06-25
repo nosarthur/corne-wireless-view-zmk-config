@@ -52,55 +52,55 @@
 		compatible = "zmk,combos";
 		combo_backspce {
 			timeout-ms = <50>;
-			key-positions = <8 9>;
+			key-positions = <10 11>;
 			bindings = <&kp BSPC>;
 		};
 		combo_tab
 		{
 			timeout-ms = <35>;
-			key-positions = <11 12>;
+			key-positions = <14 15>;
 			bindings = <&kp TAB>;
 		};
 		combo_minus
 		{
 			timeout-ms = <30>;
-			key-positions = <26 27>;
+			key-positions = <31 32>;
 			bindings = <AS(MINUS)>;
 		};
 		combo_dollar
 		{
 			timeout-ms = <30>;
-			key-positions = <25 26>;
+			key-positions = <30 31>;
 			bindings = <&kp DLLR>;
 		};
 		combo_gz
 		{
 			timeout-ms = <30>;
-			key-positions = <20 21>;
+			key-positions = <25 26>;
 			bindings = <&kp LG(Z)>;
 		};
 		combo_gx
 		{
 			timeout-ms = <30>;
-			key-positions = <21 22>;
+			key-positions = <26 27>;
 			bindings = <&kp LG(X)>;
 		};
 		combo_gc
 		{
 			timeout-ms = <40>;
-			key-positions = <22 23>;
+			key-positions = <27 28>;
 			bindings = <&kp LG(C)>;
 		};
 		combo_gv
 		{
 			timeout-ms = <30>;
-			key-positions = <23 24>;
+			key-positions = <28 29>;
 			bindings = <&kp LG(V)>;
 		};
 		combo_ent
 		{
 			timeout-ms = <30>;
-			key-positions = <17 18>;
+			key-positions = <20 21>;
 			bindings = <&kp RET>;
 		};
 	};
@@ -120,7 +120,7 @@
    &kp TAB         &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   AS(SEMI) &kp BSPC
    &hm LCTRL ESC   &kp A &kp R &kp S &kp T &kp G   &kp K &kp N  &kp E     &kp I   &kp O    &hm RSHFT RET
    &hm LSHFT GRAVE &kp Z &kp X &kp C &kp D &kp V   &kp M &kp H  AS(COMMA) AS(DOT) AS(FSLH) AS(SQT)
-                  &bh 2 ESC &mt LGUI RET &mt LSHFT SPACE   &mt RCTRL BSPC &bh 2 SPACE &bh 3 TAB
+                  &bh 2 ESC &mt LGUI RET &mt LSHFT SPACE   &mt RCTRL BSPC &bh 1 SPACE &bh 3 TAB
                         >;
                 };
 
