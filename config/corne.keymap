@@ -12,6 +12,16 @@
 
 / {
 	behaviors {
+		rst: boot_reset
+		{
+			compatible = "zmk,behavior-hold-tap";
+			label = "Bootloader Tap - Reset Hold";
+			#binding-cells = <2>;
+			tapping_term_ms = <200>;
+            flavor = "balanced";
+			bindings = <&sys_reset>, <&bootloader>;
+        };
+
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
@@ -120,7 +130,7 @@
    &kp TAB         &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   AS(SEMI) &kp BSPC
    &hm LCTRL ESC   &kp A &kp R &kp S &kp T &kp G   &kp K &kp N  &kp E     &kp I   &kp O    &hm RSHFT RET
    &hm LSHFT GRAVE &kp Z &kp X &kp C &kp D &kp V   &kp M &kp H  AS(COMMA) AS(DOT) AS(FSLH) AS(SQT)
-                  &bh 2 ESC &mt LGUI RET &mt LSHFT SPACE   &mt RCTRL BSPC &bh 1 SPACE &bh 3 TAB
+                  &lt 2 ESC &mt LGUI RET &mt LSHFT SPACE   &mt RCTRL BSPC &lt 1 SPACE &lt 3 TAB
                         >;
                 };
 
@@ -160,9 +170,9 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &bt BT_CLR &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP  &kp C_MUTE     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &none &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                          	        &kp LGUI     &trans       &kp SPACE          &trans &trans   &kp RALT
                         >;
                 };
         };
