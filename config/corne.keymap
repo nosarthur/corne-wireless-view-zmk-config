@@ -128,8 +128,8 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &kp TAB         &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   AS(SEMI) &kp BSPC
-   &hm LCTRL ESC   &kp A &kp R &kp S &kp T &kp G   &kp K &kp N  &kp E     &kp I   &kp O    &hm RSHFT RET
-   &hm LSHFT GRAVE &kp Z &kp X &kp C &kp D &kp V   &kp M &kp H  AS(COMMA) AS(DOT) AS(FSLH) AS(SQT)
+   &mt LCTRL ESC   &kp A &kp R &kp S &kp T &kp G   &kp K &kp N  &kp E     &kp I   &kp O    &mt RSHFT RET
+   &mt LSHFT GRAVE &kp Z &kp X &kp C &kp D &kp V   &kp M &kp H  AS(COMMA) AS(DOT) AS(FSLH) AS(SQT)
                   &lt 2 ESC &mt LGUI RET &mt LSHFT SPACE   &mt RCTRL BSPC &lt 1 SPACE &lt 3 TAB
                         >;
                 };
@@ -143,8 +143,8 @@
                         bindings = <
    AS(GRAVE) AS(N1)    AS(N2)   AS(N3)   AS(N4)   AS(N5)   AS(N6)       AS(N7)         AS(N8)  AS(N9)    AS(N0) &trans
    &kp ESC   AS(LBKT)  AS(RBKT) &kp LPAR &kp RPAR &trans   &kp KP_PLUS  AS(GRAVE)      &kp DQT AS(BSLH)  &kp KP_ASTERISK &trans
-   &trans    &trans    &trans   &trans   &trans   &trans   &kp KP_MINUS &kp KP_EQUAL   &trans  &trans    &trans &trans
-                       &sk LSHFT &trans  &kp N0            &kp SPACE    &trans         &trans
+   &trans    &trans    &trans   &trans   &trans   &trans   AS(MINUS) &kp KP_EQUAL   &trans  &trans    &trans &trans
+                       &sk LSHFT &trans  &kp KP_N0            &kp SPACE    &trans         &trans
                         >;
                 };
 
@@ -155,9 +155,9 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-    &none    &kp LG(TAB)   &none     &kp LS(LG(LBKT)) &kp LS(LG(RBKT)) &bt BT_NXT	&kp PG_UP &kp HOME     &kp UP        &kp END   &kp COLON &kp RA(BSPC)
-    &trans   &kp LALT      &kp SPACE &none            &kp BSPC         &bt BT_CLR   &kp PG_DN &kp LEFT     &kp DOWN      &kp RIGHT &kp RET   &kp RA(D)
-    &trans   &kp LG(GRAVE) &none     &kp LS(LG(C))    &kp LC(LG(C))    &none        &kp RA(D) &kp RA(LEFT) &kp RA(RIGHT) &kp RA(B) &kp RA(F) &kp RA(F)
+    &none    &kp LG(TAB)   &none     &kp LS(LG(LBKT)) &kp LS(LG(RBKT)) &none   &kp PG_UP &kp HOME     &kp UP        &kp END   &kp COLON &kp RA(BSPC)
+    &trans   &kp LALT      &kp SPACE &none            &kp BSPC         &none   &kp PG_DN &kp LEFT     &kp DOWN      &kp RIGHT &kp RET   &kp RA(D)
+    &trans   &kp LG(GRAVE) &none     &kp LS(LG(C))    &kp LC(LG(C))    &none   &kp RA(D) &kp RA(LEFT) &kp RA(RIGHT) &kp RA(B) &kp RA(F) &kp RA(F)
                            &trans    &kp CAPS &trans     &kp RA(DEL)  &kp DEL &kp RA(BSPC)
                         >;
                 };
@@ -169,8 +169,8 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP  &kp C_MUTE     &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4        &bt BT_NXT         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+   &bt BT_CLR &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP  &bt BT_CLR    &none  &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp KP_N4  &trans
    &none &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                           	        &kp LGUI     &trans       &kp SPACE          &trans &trans   &kp RALT
                         >;
