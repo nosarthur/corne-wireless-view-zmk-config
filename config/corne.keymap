@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTO_SHIFT";
             #binding-cells = <2>;
-            tapping_term_ms = <135>;
+            tapping_term_ms = <183>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -172,7 +172,7 @@
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4        &bt BT_NXT         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP  &bt BT_CLR    &none  &kp KP_N1   &kp KP_N2 &kp KP_N3 &kp KP_N4  &trans
    &none &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE          &trans &trans   &kp RALT
+                          	        &kp LGUI     &kp CAPS    &kp SPACE          &trans &trans   &kp RALT
                         >;
                 };
         };
